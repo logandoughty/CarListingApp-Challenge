@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CardView: View {
     //MARK: PROPERTIES
-    var car: Car
-    var index: Int
+    @Binding var car: Car
+    @State var index: Int
     
     @State var isShowingCard = false
     @Binding var lastSelected: Int
@@ -42,15 +42,15 @@ struct CardView: View {
                                 }
                                 .padding(.leading, 20)
                             } else {
-                                ForEach(car.prosList, id: \.self){ item in
-                                    if item.count > 0 {
+                                ForEach(car.prosList.indices, id: \.self){ i in
+                                    if car.prosList[i].count > 0 {
                                         HStack {
                                             Image(systemName: "circle.fill")
                                                 .resizable()
                                                 .scaledToFit()
                                                 .frame(width: 5)
                                                 .foregroundColor(.orange)
-                                            Text(item)
+                                            Text(car.prosList[i])
                                         }
                                         .padding(.leading, 20)
                                     }
@@ -79,15 +79,15 @@ struct CardView: View {
                                 }
                                 .padding(.leading, 20)
                             } else {
-                                ForEach(car.consList, id: \.self){ item in
-                                    if item.count > 0 {
+                                ForEach(car.consList.indices, id: \.self){ i in
+                                    if car.consList.count > 0 {
                                         HStack {
                                             Image(systemName: "circle.fill")
                                                 .resizable()
                                                 .scaledToFit()
                                                 .frame(width: 5)
                                                 .foregroundColor(.orange)
-                                            Text(item)
+                                            Text(car.consList[i])
                                         }
                                         .padding(.leading, 20)
                                     }
@@ -135,15 +135,18 @@ struct CardView: View {
             .accentColor(.clear)
         }
         .onAppear {
-            if index == 0 && lastSelected == 0 {
+            if index == 0 {
                 isShowingCard = true
             } else if index != lastSelected {
                 isShowingCard = false
             }
+            print(index)
         }
         .onChange(of: lastSelected) { val in
             if val != index {
                 isShowingCard = false
+            } else {
+                isShowingCard = true
             }
         }
     }
@@ -154,7 +157,7 @@ struct CardView_Previews: PreviewProvider {
     static var vehicles: [Car] = Bundle.main.decode("car_list.json")
     
     static var previews: some View {
-        CardView(car: vehicles[0], index: 0, isShowingCard: true, lastSelected: .constant(1))
+        CardView(car: .constant(vehicles[0]), index: 0, isShowingCard: true, lastSelected: .constant(1))
             .previewLayout(.sizeThatFits)
             .padding()
     }

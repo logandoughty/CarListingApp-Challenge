@@ -15,6 +15,7 @@
 		815C684E28A86B5A0041799C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815C684D28A86B5A0041799C /* CardView.swift */; };
 		815C685228A86F600041799C /* Bundle-Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815C685128A86F600041799C /* Bundle-Decoder.swift */; };
 		815C685928A886070041799C /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815C685828A886070041799C /* StarRatingView.swift */; };
+		819900D728ACDBF4002768F5 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819900D628ACDBF4002768F5 /* Car.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		815C684D28A86B5A0041799C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		815C685128A86F600041799C /* Bundle-Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decoder.swift"; sourceTree = "<group>"; };
 		815C685828A886070041799C /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
+		819900D628ACDBF4002768F5 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		815C683B28A866460041799C /* CarListingApp */ = {
 			isa = PBXGroup;
 			children = (
+				819900D528ACDBE7002768F5 /* Model */,
 				815C685A28A887F50041799C /* Components */,
 				815C685328A86F970041799C /* Extension */,
 				815C684C28A86AEB0041799C /* Data */,
@@ -101,6 +104,14 @@
 				815C685828A886070041799C /* StarRatingView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		819900D528ACDBE7002768F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				819900D628ACDBF4002768F5 /* Car.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 			files = (
 				815C683F28A866460041799C /* ContentView.swift in Sources */,
 				815C684E28A86B5A0041799C /* CardView.swift in Sources */,
+				819900D728ACDBF4002768F5 /* Car.swift in Sources */,
 				815C685228A86F600041799C /* Bundle-Decoder.swift in Sources */,
 				815C685928A886070041799C /* StarRatingView.swift in Sources */,
 				815C683D28A866460041799C /* CarListingAppApp.swift in Sources */,

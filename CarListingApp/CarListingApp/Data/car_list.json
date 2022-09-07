@@ -34,6 +34,14 @@
         "model":"GLE coupe",
         "prosList":[],
         "rating":2
-        
+    },
+    {
+        "consList":["You may lose a wheel","Expensive maintenance"],
+        "customerPrice":95000.0,
+        "make":"Mercedes Benz",
+        "marketPrice":85900.0,
+        "model":"GLC",
+        "prosList":[],
+        "rating":1
     }
 ]
